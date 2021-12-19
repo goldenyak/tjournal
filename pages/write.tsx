@@ -1,6 +1,7 @@
 import React from 'react';
 import {NextPage} from "next";
 import {TextField} from '@material-ui/core';
+import {MainLayout} from "../layouts/MainLayout";
 
 interface WritePageProps {
 
@@ -8,10 +9,11 @@ interface WritePageProps {
 
 const WritePage: NextPage = () => {
     return (
-        <div style={{backgroundColor: '#fff'}}>
-            <TextField placeholder='Заголовок'/>
-
-        </div>
+        <MainLayout>
+            <div style={{backgroundColor: '#fff'}}>
+                <TextField placeholder='Заголовок'/>
+            </div>
+        </MainLayout>
     );
 };
 
