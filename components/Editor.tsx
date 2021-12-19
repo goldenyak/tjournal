@@ -1,14 +1,12 @@
 import React from 'react';
 import EditorJS from "@editorjs/editorjs";
 
-const Editor: React.FC = () => {
-
+export const Editor: React.FC = () => {
 
     React.useEffect(() => {
         const editor = new EditorJS({
             holder: 'editor'
         });
-
         return () => {
             editor.isReady.then(() => {
                 editor.destroy();
@@ -18,7 +16,7 @@ const Editor: React.FC = () => {
     }, [])
 
     return (
-        <div id='editor' />
+        <div id='editor'/>
     );
 };
 
