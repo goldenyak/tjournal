@@ -19,7 +19,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
                                                       }) => {
     return (
         <div className={clsx('wrapper', className)}>
-            {hideMenu && <div className="leftSide">
+            {!hideMenu && <div className="leftSide">
                 <LeftMenu/>
             </div>}
             <div className={clsx('content', {'content--full': contentFullWidth})}>{children}</div>
