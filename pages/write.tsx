@@ -8,7 +8,10 @@ interface WritePageProps {
 
 const WritePage: NextPage = () => {
     return (
-        <TextField/>
+        <div style={{backgroundColor: '#fff'}}>
+            <TextField/>
+
+        </div>
     );
 };
 
