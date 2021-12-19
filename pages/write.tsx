@@ -9,7 +9,7 @@ interface WritePageProps {
 
 const WritePage: NextPage = () => {
     return (
-        <MainLayout>
+        <MainLayout hideComments={true} >
             <div style={{backgroundColor: '#fff'}}>
                 <TextField placeholder='Заголовок'/>
             </div>
