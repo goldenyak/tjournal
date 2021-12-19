@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextField} from "@material-ui/core";
+import {Input} from "@material-ui/core";
 import styles from './WriteForm.module.scss'
 
 interface WriteFormProps {
@@ -9,7 +9,7 @@ interface WriteFormProps {
 const WriteForm: React.FC<WriteFormProps> = ({title}) => {
     return (
         <div>
-            <TextField classes={{root: styles.titleField}} placeholder='Заголовок' defaultValue={title}/>
+            <Input classes={{root: styles.titleField}} placeholder='Заголовок' defaultValue={title}/>
         </div>
     );
 };
