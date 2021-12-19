@@ -9,7 +9,7 @@ interface WritePageProps {
 const WritePage: NextPage = () => {
     return (
         <div style={{backgroundColor: '#fff'}}>
-            <TextField/>
+            <TextField placeholder='Заголовок'/>
 
         </div>
     );
