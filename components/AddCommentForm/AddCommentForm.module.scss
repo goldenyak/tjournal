@@ -1,9 +1,10 @@
 .fieldRoot {
   margin-top: 20px;
   background-color: #f2f2f2;
-  border: none;
-  border-radius: 8px;
-  padding: 7px;
+  border: 1px solid #c0c0c0;
+  border-radius: 10px;
+  padding: 7px !important;
+
   &:before, &:after {
     display: none;
   }
