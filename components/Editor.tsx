@@ -5,7 +5,8 @@ export const Editor: React.FC = () => {
 
     React.useEffect(() => {
         const editor = new EditorJS({
-            holder: 'editor'
+            holder: 'editor',
+            placeholder: 'Введите текст вашей заметки'
         });
         return () => {
             editor.isReady.then(() => {
