@@ -2,6 +2,21 @@ import React from 'react';
 import {Divider, Paper, Tab, Tabs, Typography} from "@material-ui/core";
 import {Comment} from "../Comment";
 
+type Comment = {
+    text: string,
+    id: number,
+    createdAt: string,
+    user: {
+        fullname: string,
+        avatarUrl: string,
+    }
+
+}
+
+interface PostCommentsProps {
+    items: [],
+}
+
 const PostComments: React.FC = () => {
     return (
         <Paper elevation={0} className="mt-40 p-30">
