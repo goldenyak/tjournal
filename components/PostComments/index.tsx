@@ -10,14 +10,13 @@ type Comment = {
         fullname: string,
         avatarUrl: string,
     }
-
 }
 
 interface PostCommentsProps {
-    items: [],
+    items: Comment[],
 }
 
-const PostComments: React.FC = () => {
+const PostComments: React.FC<PostCommentsProps> = ({items}) => {
     return (
         <Paper elevation={0} className="mt-40 p-30">
             <Typography variant="h6" className="mb-20">
@@ -29,9 +28,7 @@ const PostComments: React.FC = () => {
             </Tabs>
             <Divider />
             <div className="mb-20" />
-            <Comment />
-            <Comment />
-            <Comment />
+            {items.map(obj => <Comment key={obj.id} user={obj.user} text={obj.text} createdAt={obj.createdAt}/>)}
         </Paper>
     );
 };

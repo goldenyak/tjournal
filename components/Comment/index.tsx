@@ -9,9 +9,10 @@ interface CommentPostProps {
     fullname: string;
   };
   text?: string;
+  createdAt: string;
 }
 
-export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
+export const Comment: React.FC<CommentPostProps> = ({ user, text, createdAt }) => {
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleClick = (event) => {
@@ -30,7 +31,7 @@ export const Comment: React.FC<CommentPostProps> = ({ user, text }) => {
           alt="Avatar"
         />
         <b>Master Oogway</b>
-        <span>5 часов</span>
+        <span>{createdAt}</span>
       </div>
       <Typography className={styles.text}>
         Суперджет это ад адский, два раза летала и оба раза прощалась с жизнью. Трясёт хуже, чем в
