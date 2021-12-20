@@ -2,7 +2,7 @@ import React from 'react';
 import {Divider, Paper, Tab, Tabs, Typography} from "@material-ui/core";
 import {Comment} from "../Comment";
 
-type Comment = {
+type CommentObj = {
     text: string,
     id: number,
     createdAt: string,
@@ -13,7 +13,7 @@ type Comment = {
 }
 
 interface PostCommentsProps {
-    items: Comment[],
+    items: CommentObj[],
 }
 
 const PostComments: React.FC<PostCommentsProps> = ({items}) => {
