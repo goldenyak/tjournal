@@ -19,6 +19,7 @@ interface PostCommentsProps {
 const PostComments: React.FC<PostCommentsProps> = ({items}) => {
     return (
         <Paper elevation={0} className="mt-40 p-30">
+        <div className='container'>
             <Typography variant="h6" className="mb-20">
                 42 комментария
             </Typography>
@@ -29,6 +30,7 @@ const PostComments: React.FC<PostCommentsProps> = ({items}) => {
             <Divider />
             <div className="mb-20" />
             {items.map(obj => <Comment key={obj.id} user={obj.user} text={obj.text} createdAt={obj.createdAt}/>)}
+        </div>
         </Paper>
     );
 };
