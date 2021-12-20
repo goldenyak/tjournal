@@ -1,5 +1,5 @@
 import React from 'react';
-import {Input} from "@material-ui/core";
+import {Button, Input} from "@material-ui/core";
 import styles from './WriteForm.module.scss';
 import dynamic from "next/dynamic";
 
@@ -14,7 +14,13 @@ const WriteForm: React.FC<WriteFormProps> = ({title}) => {
     return (
         <div>
             <Input classes={{root: styles.titleField}} placeholder='Заголовок' defaultValue={title}/>
-            <Editor />
+            <div className={styles.editor}>
+                <Editor />
+            </div>
+            <Button color='primary' variant="contained">
+                Опубликовать
+            </Button>
+
         </div>
     );
 };
