@@ -2,6 +2,7 @@ import React from 'react';
 import ArrowRightIcon from '@material-ui/icons/NavigateNextOutlined';
 
 import styles from './SideComments.module.scss';
+import data from '../../data';
 
 export const comments = [
     {
@@ -76,7 +77,7 @@ export const SideComments = () => {
             <h3>
                 Комментарии <ArrowRightIcon/>
             </h3>
-            {comments.map((obj) => (
+            {data.comments.popular.map((obj) => (
                 <CommentItem key={obj.id} {...obj} />
             ))}
         </div>
