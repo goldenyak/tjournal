@@ -1,5 +1,5 @@
 import React from 'react';
-import {Input} from "@material-ui/core";
+import {Button, Input} from "@material-ui/core";
 import styles from './AddCommentForm.module.scss'
 
 const AddCommentForm: React.FC = () => {
@@ -14,6 +14,7 @@ const AddCommentForm: React.FC = () => {
                    multiline
                    fullWidth
                    placeholder="Написать комментарий ..."/>
+                <Button className={styles.addButton} variant='contained' color="primary">Добавить</Button>
         </div>
     );
 };

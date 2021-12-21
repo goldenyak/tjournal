@@ -1,11 +1,17 @@
 .fieldRoot {
-  margin-top: 20px;
-  background-color: #f2f2f2;
-  border: 1px solid #c0c0c0;
+  margin-top: 15px;
+  background-color: #f7f7f7;
+  border: 1px solid rgba(0, 0, 0, .03);
   border-radius: 10px;
-  padding: 7px !important;
+  padding: 17px !important;
+  cursor: pointer !important;
 
   &:before, &:after {
     display: none;
   }
+}
+
+.addButton {
+  position: absolute !important;
+  right: 0;
 }
