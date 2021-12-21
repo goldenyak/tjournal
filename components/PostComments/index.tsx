@@ -18,6 +18,9 @@ interface PostCommentsProps {
 }
 
 const PostComments: React.FC<PostCommentsProps> = ({items}) => {
+
+    const [activeTab, setActiveTab] = React.useState(0);
+
     return (
         <Paper elevation={0} className="mt-40 p-30">
             <div className='container'>
@@ -25,7 +28,7 @@ const PostComments: React.FC<PostCommentsProps> = ({items}) => {
                     42 комментария
                 </Typography>
 
-                <Tabs className="mt-20" value={0} indicatorColor="primary" textColor="primary">
+                <Tabs onChange={(e, newValue) => setActiveTab(newValue)} className="mt-20" value={activeTab} indicatorColor="primary" textColor="primary">
                     <Tab label="Популярные"/>
                     <Tab label="По порядку"/>
                 </Tabs>
