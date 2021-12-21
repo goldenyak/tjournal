@@ -8,7 +8,7 @@ import data from '../../data';
 const PostComments: React.FC = () => {
 
     const [activeTab, setActiveTab] = React.useState(0);
-    const comments = data.comments[activeTab ? 'popular' : 'new'];
+    const comments = data.comments[activeTab === 0 ? 'popular' : 'new'];
 
     return (
         <Paper elevation={0} className="mt-40 p-30">
