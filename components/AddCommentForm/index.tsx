@@ -14,7 +14,7 @@ const AddCommentForm: React.FC = () => {
                    multiline
                    fullWidth
                    placeholder="Написать комментарий ..."/>
-                <Button className={styles.addButton} variant='contained' color="primary">Добавить</Button>
+            {clicked && <Button className={styles.addButton} variant='contained' color="primary">Добавить</Button>}
         </div>
     );
 };
