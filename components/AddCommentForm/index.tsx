@@ -7,7 +7,7 @@ const AddCommentForm: React.FC = () => {
     const [clicked, setClicked] = React.useState(false)
 
     return (
-        <div>
+        <div className={styles.form}>
             <Input onFocus={() => setClicked(true)}
                    classes={{root: styles.fieldRoot}}
                    minRows={clicked ? 5 : 2}
