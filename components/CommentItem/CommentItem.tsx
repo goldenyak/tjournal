@@ -14,6 +14,7 @@ interface CommentItemProps {
     };
 }
 
+
 const CommentItem: React.FC<CommentItemProps> = ({user, text, post}) => {
 
     return (

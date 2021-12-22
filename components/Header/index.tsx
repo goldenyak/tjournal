@@ -1,6 +1,17 @@
 import React from 'react';
 import Link from 'next/link';
-import {Paper, Button, IconButton, Avatar} from '@material-ui/core';
+import {
+    Paper,
+    Button,
+    IconButton,
+    Avatar,
+    Dialog,
+    DialogTitle,
+    DialogContent,
+    DialogActions,
+    DialogContentText
+} from '@material-ui/core';
+
 import {
     SearchOutlined as SearchIcon,
     CreateOutlined as PenIcon,
@@ -13,6 +24,17 @@ import {
 import styles from './Header.module.scss';
 
 export const Header: React.FC = () => {
+
+    const [open, setOpen] = React.useState(false);
+
+    const handleClickOpen = () => {
+        setOpen(true);
+    };
+
+    const handleClose = () => {
+        setOpen(false);
+    };
+
     return (
         <Paper classes={{root: styles.root}} elevation={0}>
             <div className="d-flex align-center">
@@ -36,7 +58,7 @@ export const Header: React.FC = () => {
                 </Link>
             </div>
             <div className="d-flex align-center">
-                <IconButton>
+                <IconButton onClick={handleClickOpen}>
                     <MessageIcon/>
                 </IconButton>
                 <IconButton>
@@ -53,6 +75,29 @@ export const Header: React.FC = () => {
                     </a>
                 </Link>
             </div>
+            <Dialog
+                open={open}
+                onClose={handleClose}
+                aria-labelledby="responsive-dialog-title"
+            >
+                <DialogTitle id="responsive-dialog-title">
+                    {"Use Google's location service?"}
+                </DialogTitle>
+                <DialogContent>
+                    <DialogContentText>
+                        Let Google help apps determine location. This means sending anonymous
+                        location data to Google, even when no apps are running.
+                    </DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button autoFocus onClick={handleClose}>
+                        Disagree
+                    </Button>
+                    <Button onClick={handleClose} autoFocus>
+                        Agree
+                    </Button>
+                </DialogActions>
+            </Dialog>
         </Paper>
     );
 };
