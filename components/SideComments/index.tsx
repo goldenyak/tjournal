@@ -52,7 +52,7 @@ export const SideComments = () => {
     const [visible, setVisible] = React.useState(true);
 
     const toggleVisible = () => {
-        setVisible(false)
+        setVisible(!visible)
     };
 
     return (
