@@ -4,11 +4,12 @@ import Link from 'next/link';
 
 interface CommentItemProps {
     user: {
-        id: string;
+        id: number;
         fullname: string;
     };
     text: string;
     post: {
+        id: number;
         title: string;
     };
 }
@@ -28,9 +29,11 @@ const CommentItem: React.FC<CommentItemProps> = ({user, text, post}) => {
                 </Link>
             </div>
             <p className={styles.text}>{text}</p>
-            <a href="#">
-                <span className={styles.postTitle}>{post.title}</span>
-            </a>
+            <Link href={`/news/${user.id}`}>
+                <a>
+                    <span className={styles.postTitle}>{post.title}</span>
+                </a>
+            </Link>
         </div>
     );
 };
