@@ -38,7 +38,7 @@ export const comments = [
             fullname: 'Вася Пупкин',
             avatarUrl: 'https://images.unsplash.com/photo-1640003854809-b2a0e97bb289?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyM3x8fGVufDB8fHx8&auto=format&fit=crop&w=500&q=60'
         },
-        text: 'Теперь, каждое рабочее утро, после кровати, я перекладываюсь туда спать ещё на часок. Ну и…',
+        text: 'Теперь, каждое рабочее утро, после кровати, я перекладываюсь туда спать ещё на часок. Ну и...',
         post: {
             title: 'Какая у вас дома ванна?',
         },
