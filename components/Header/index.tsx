@@ -56,14 +56,14 @@ export const Header: React.FC = () => {
                 </Link>
             </div>
             <div className="d-flex align-center">
-                <IconButton onClick={handleClickOpen}>
+                <IconButton>
                     <MessageIcon/>
                 </IconButton>
                 <IconButton>
                     <NotificationIcon/>
                 </IconButton>
                 <IconButton>
-                    <PersonAddAltOutlinedIcon/>
+                    <PersonAddAltOutlinedIcon  onClick={handleClickOpen}/>
                 </IconButton>
                 {/*<Link href="/profile/1">*/}
                 {/*    <a className="d-flex align-center">*/}
