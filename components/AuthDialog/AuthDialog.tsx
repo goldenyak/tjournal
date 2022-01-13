@@ -58,7 +58,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                 <TextField
                                     className="mb-20"
                                     size="small"
-                                    label="Никнейм"
+                                    label="Имя и фамилия"
                                     variant="outlined"
                                     fullWidth
                                     required
@@ -66,12 +66,20 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                 <TextField
                                     className="mb-20"
                                     size="small"
-                                    label="Эл. почта"
+                                    label="Почта"
+                                    type="email"
                                     variant="outlined"
                                     fullWidth
                                     required
                                 />
-                                <TextField size="small" label="Пароль" variant="outlined" fullWidth required/>
+                                <TextField
+                                    size="small"
+                                    label="Пароль"
+                                    type="password"
+                                    variant="outlined"
+                                    fullWidth
+                                    required
+                                />
                                 <Button className="mt-20" color="primary" variant="contained">
                                     Войти
                                 </Button>
