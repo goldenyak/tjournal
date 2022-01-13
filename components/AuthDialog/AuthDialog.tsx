@@ -1,5 +1,6 @@
 import React from 'react';
 import {Button, Dialog, DialogContent, DialogContentText, Divider, TextField, Typography} from '@material-ui/core';
+import ArrowBack from '@material-ui/icons/ArrowBack';
 import styles from './AuthDialog.module.scss';
 
 interface AuthDialogProps {
@@ -55,7 +56,10 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                 Почта
                             </Button></>}
                         {formType === "email" && <div>
-                            <Typography onClick={() => setFormType("main")} className={styles.title}>Вернуться</Typography>
+                            <div onClick={() => setFormType("main")} style={{display: "flex", alignItems: "baseline", cursor: "pointer"}}>
+                                <ArrowBack style={{marginRight: "7px", color: "black"}}/>
+                                <Typography  className={styles.title}>Вернуться</Typography>
+                            </div>
                             <form>
                                 <TextField
                                     className="mb-20"
