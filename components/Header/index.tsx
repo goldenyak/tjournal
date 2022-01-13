@@ -62,9 +62,10 @@ export const Header: React.FC = () => {
                 <IconButton>
                     <NotificationIcon/>
                 </IconButton>
-                <IconButton>
-                    <PersonAddAltOutlinedIcon  onClick={handleClickOpen}/>
-                </IconButton>
+                <div onClick={handleClickOpen} className={styles.enterIcon}>
+                    <PersonAddAltOutlinedIcon/>
+                    <p>Войти</p>
+                </div>
                 {/*<Link href="/profile/1">*/}
                 {/*    <a className="d-flex align-center">*/}
                 {/*        <Avatar*/}
@@ -76,7 +77,7 @@ export const Header: React.FC = () => {
                 {/*    </a>*/}
                 {/*</Link>*/}
             </div>
-            { <AuthDialog onClose={handleClose} visible={authVisible}/>}
+            {<AuthDialog onClose={handleClose} visible={authVisible}/>}
         </Paper>
     );
 };
