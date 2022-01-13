@@ -21,14 +21,14 @@ import {AuthDialog} from "../AuthDialog/AuthDialog";
 
 export const Header: React.FC = () => {
 
-    const [open, setOpen] = React.useState(false);
+    const [authVisible, setAuthVisible] = React.useState(false);
 
     const handleClickOpen = () => {
-        setOpen(true);
+        setAuthVisible(true);
     };
 
     const handleClose = () => {
-        setOpen(false);
+        setAuthVisible(false);
     };
 
     return (
@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
                     </a>
                 </Link>
             </div>
-            {open && <AuthDialog onClose={handleClose}/>}
+            { <AuthDialog onClose={handleClose} visible={authVisible}/>}
         </Paper>
     );
 };
