@@ -1,0 +1,22 @@
+.content {
+  width: 70%;
+  margin: 0 auto;
+
+  .title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: black;
+  }
+
+  button {
+    position: relative;
+    svg {
+      position: absolute;
+      left: 10px;
+      width: 22px;
+      height: 22px;
+    }
+  }
+}
+
