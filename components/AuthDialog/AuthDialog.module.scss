@@ -22,15 +22,17 @@
 
 .backTitle {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   cursor: pointer;
+  margin-bottom: 20px;
 
   .backTitleIcon {
     margin-right: 7px;
     color: black;
   }
 
-  .title {
+  .titleText {
+    color: black;
     font-size: 20px;
     font-weight: 400;
   }

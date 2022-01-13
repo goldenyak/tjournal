@@ -58,7 +58,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                         {formType === "email" && <div>
                             <div className={styles.backTitle} onClick={() => setFormType("main")}>
                                 <ArrowBack className={styles.backTitleIcon}/>
-                                <Typography  className={styles.title}>Вернуться</Typography>
+                                <Typography  className={styles.titleText}>Вернуться</Typography>
                             </div>
                             <form>
                                 <TextField
