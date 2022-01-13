@@ -15,6 +15,8 @@ import {
     ExpandMoreOutlined as ArrowBottom,
     NotificationsNoneOutlined as NotificationIcon,
 } from '@material-ui/icons';
+import PersonAddAltOutlinedIcon from '@mui/icons-material/PersonAddAltOutlined';
+
 
 import styles from './Header.module.scss';
 import {AuthDialog} from "../AuthDialog/AuthDialog";
@@ -60,16 +62,19 @@ export const Header: React.FC = () => {
                 <IconButton>
                     <NotificationIcon/>
                 </IconButton>
-                <Link href="/profile/1">
-                    <a className="d-flex align-center">
-                        <Avatar
-                            className={styles.avatar}
-                            alt="Remy Sharp"
-                            src="https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/"
-                        />
-                        <ArrowBottom/>
-                    </a>
-                </Link>
+                <IconButton>
+                    <PersonAddAltOutlinedIcon/>
+                </IconButton>
+                {/*<Link href="/profile/1">*/}
+                {/*    <a className="d-flex align-center">*/}
+                {/*        <Avatar*/}
+                {/*            className={styles.avatar}*/}
+                {/*            alt="Remy Sharp"*/}
+                {/*            src="https://leonardo.osnova.io/5ffeac9a-a0e5-5be6-98af-659bfaabd2a6/-/scale_crop/108x108/-/format/webp/"*/}
+                {/*        />*/}
+                {/*        <ArrowBottom/>*/}
+                {/*    </a>*/}
+                {/*</Link>*/}
             </div>
             { <AuthDialog onClose={handleClose} visible={authVisible}/>}
         </Paper>
