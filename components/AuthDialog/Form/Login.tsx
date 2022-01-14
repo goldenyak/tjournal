@@ -1,5 +1,5 @@
 import React from 'react';
-import { useForm } from "react-hook-form";
+import { useForm, FormProvider } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from "yup";
 import styles from "../AuthDialog.module.scss";
@@ -28,42 +28,30 @@ const LoginForm: React.FC<LoginFormProps> = ({onOpenRegister, onOpenLogin}) => {
                 <ArrowBack className={styles.backTitleIcon}/>
                 <Typography  className={styles.backTitleText}>К авторизации</Typography>
             </div>
-            <form onSubmit={form.handleSubmit(onSubmit)}>
-                <TextField
-                    {...form.register("email")}
-                    name="email"
-                    className="mb-20"
-                    size="small"
-                    label="Почта"
-                    type="email"
-                    variant="outlined"
-                    error={!!form.formState.errors.email?.message}
-                    helperText={form.formState.errors.email?.message}
-                    fullWidth
-                    required
-                />
-                <TextField
-                    {...form.register("password")}
-                    name="password"
-                    size="small"
-                    label="Пароль"
-                    type="password"
-                    variant="outlined"
-                    error={!!form.formState.errors.password?.message}
-                    helperText={form.formState.errors.password?.message}
-                    fullWidth
-                    required
-                />
-                <div className="d-flex align-center justify-between mt-20">
-                    <Button color="primary" variant="contained">
-                        Войти
-                    </Button>
-                    <Button onClick={onOpenRegister} color="primary" variant="text">
-                        Регистрация
-                    </Button>
-                </div>
-
-            </form>
+            <FormProvider {...form}>
+                <form onSubmit={form.handleSubmit(onSubmit)}>
+                    <TextField
+                        {...form.register("password")}
+                        name="password"
+                        size="small"
+                        label="Пароль"
+                        type="password"
+                        variant="outlined"
+                        error={!!form.formState.errors.password?.message}
+                        helperText={form.formState.errors.password?.message}
+                        fullWidth
+                        required
+                    />
+                    <div className="d-flex align-center justify-between mt-20">
+                        <Button color="primary" variant="contained">
+                            Войти
+                        </Button>
+                        <Button onClick={onOpenRegister} color="primary" variant="text">
+                            Регистрация
+                        </Button>
+                    </div>
+                </form>
+            </FormProvider>
         </div>
     );
 };
