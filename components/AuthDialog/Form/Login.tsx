@@ -6,6 +6,7 @@ import styles from "../AuthDialog.module.scss";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import {Button, TextField, Typography} from "@material-ui/core";
 import {LoginFormSchema} from "../../../utils/schemas/loginValidation";
+import {FormField} from "../../FormField";
 
 interface LoginFormProps {
     onOpenRegister: () => void
@@ -30,18 +31,8 @@ const LoginForm: React.FC<LoginFormProps> = ({onOpenRegister, onOpenLogin}) => {
             </div>
             <FormProvider {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)}>
-                    <TextField
-                        {...form.register("password")}
-                        name="password"
-                        size="small"
-                        label="Пароль"
-                        type="password"
-                        variant="outlined"
-                        error={!!form.formState.errors.password?.message}
-                        helperText={form.formState.errors.password?.message}
-                        fullWidth
-                        required
-                    />
+                    <FormField name="email" label="Почта"/>
+                    <FormField name="password" label="Пароль"/>
                     <div className="d-flex align-center justify-between mt-20">
                         <Button color="primary" variant="contained">
                             Войти
