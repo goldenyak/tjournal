@@ -10,7 +10,7 @@ interface AuthDialogProps {
 
 export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
 
-    const [formType, setFormType] = React.useState<"main" | "email">("main")
+    const [formType, setFormType] = React.useState<"main" | "login" | "register">("main")
 
     return (
         <Dialog
@@ -47,7 +47,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                 </svg>
                                 Google
                             </Button>
-                            <Button onClick={() => setFormType("email")} className="mb-15" variant="contained" fullWidth>
+                            <Button onClick={() => setFormType("login")} className="mb-15" variant="contained" fullWidth>
                                 <svg fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50" width="50px"
                                      height="50px">
                                     <path
@@ -55,7 +55,7 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                 </svg>
                                 Почта
                             </Button></>}
-                        {formType === "email" && <div>
+                        {formType === "login" && <div>
                             <div className={styles.backTitle} onClick={() => setFormType("main")}>
                                 <ArrowBack className={styles.backTitleIcon}/>
                                 <Typography  className={styles.backTitleText}>Вернуться</Typography>
@@ -86,9 +86,15 @@ export const AuthDialog: React.FC<AuthDialogProps> = ({onClose, visible}) => {
                                     fullWidth
                                     required
                                 />
-                                <Button className="mt-20" color="primary" variant="contained">
-                                    Войти
-                                </Button>
+                                <div className="d-flex align-center justify-between mt-20">
+                                    <Button color="primary" variant="contained">
+                                        Войти
+                                    </Button>
+                                    <Button color="primary" variant="text">
+                                        Регистрация
+                                    </Button>
+                                </div>
+
                             </form>
                         </div>}
                     </div>
