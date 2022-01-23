@@ -4,8 +4,8 @@ import styles from "../AuthDialog.module.scss";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import {useForm, FormProvider} from "react-hook-form";
 import {yupResolver} from "@hookform/resolvers/yup";
-import {LoginFormSchema} from "../../../utils/schemas/loginValidation";
 import {FormField} from "../../FormField";
+import { LoginFormSchema } from '../../utils/schemas/loginValidation';
 
 interface RegisterFormProps {
     onOpenLogin: () => void,

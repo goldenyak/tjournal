@@ -5,8 +5,8 @@ import * as yup from "yup";
 import styles from "../AuthDialog.module.scss";
 import ArrowBack from "@material-ui/icons/ArrowBack";
 import {Button, TextField, Typography} from "@material-ui/core";
-import {LoginFormSchema} from "../../../utils/schemas/loginValidation";
 import {FormField} from "../../FormField";
+import { LoginFormSchema } from '../../utils/schemas/loginValidation';
 
 interface LoginFormProps {
     onOpenRegister: () => void
