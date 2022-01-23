@@ -33,6 +33,7 @@ const LoginForm: React.FC<LoginFormProps> = ({onOpenRegister, onOpenLogin}) => {
                 <form onSubmit={form.handleSubmit(onSubmit)}>
                     <FormField name="email" label="Почта"/>
                     <FormField name="password" label="Пароль"/>
+                    <FormField name="password" label="Пароль"/>
                     <div className="d-flex align-center justify-between mt-20">
                         <Button color="primary" variant="contained">
                             Войти
